@@ -60,7 +60,7 @@
                       <li><a href="form.html">General Form</a></li>
                       <li><a href="form_advanced.html">Advanced Components</a></li>
                       <li><a href="components/registro_docente.php" onclick="{()=>components/registro_docente.php}">Registro de Docentes</a></li>
-                      <li><a href="form_wizards.html">Form Wizard</a></li>
+                      <li><a href="components/registro_estudiantes.php" onclick="{()=>components/registro_estudiantes.php}">  Registro de estudiantes</a></li>
                       <li><a href="form_upload.html">Form Upload</a></li>
                       <li><a href="form_buttons.html">Form Buttons</a></li>
                     </ul>
