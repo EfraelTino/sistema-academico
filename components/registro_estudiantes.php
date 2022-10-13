@@ -140,21 +140,26 @@
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12"> Año de ingreso: </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="password2" type="text" name="anio_ingreso" data-validate-linked="anio_ingreso" class="form-control col-md-7 col-xs-12" required="">
+                                            <select id="anio_ingreso" required="" name="anio_ingreso" class="form-control col-md-7 col-xs-12" type="number">
+                                                <option value="1">2022 </option>
+                                                <option value="2">2021</option>
+                                                <option value="3">2020</option>
+                                                <option value="4">2019</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Seccion
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="seccion">Seccion
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" id="telephone" name="seccion" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
+                                            <input type="text" id="seccion" name="seccion" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Turno
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select id="cargo" required="" name="turno" class="form-control col-md-7 col-xs-12" type="number">
+                                            <select id="cargo" required="" name="turno" class="form-control col-md-7 col-xs-12" type="text">
                                                 <option value="1">MAÑANA </option>
                                                 <option value="2">TARDE</option>
                                             </select>
@@ -164,7 +169,7 @@
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Discapacidad
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select id="cargo" required="" name="discapacidad" class="form-control col-md-7 col-xs-12" type="number">
+                                            <select id="cargo" required="" name="discapacidad" class="form-control col-md-7 col-xs-12" type="text">
                                                 <option value="1">SI</option>
                                                 <option value="2">NO</option>
                                             </select>
@@ -175,8 +180,11 @@
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <select id="cargo" required="" name="programa" class="form-control col-md-7 col-xs-12" type="number">
-                                                <option value="1">Computacion e informatica</option>
-                                                <option value="2">Industrias alimentarias</option>
+                                                <option value="1">Diseño y Programación web</option>
+                                                <option value="2">Enfermería Técnica</option>
+                                                <option value="3">Industrias alimentarias</option>
+                                                <option value="4">Mecatrónica Automotriz</option>
+                                                <option value="5">Producción agropecuaria</option>
                                             </select>
                                         </div>
                                     </div>
@@ -187,6 +195,10 @@
                                             <select id="cargo" required="" name="semestre" class="form-control col-md-7 col-xs-12" type="number">
                                                 <option value="1">I</option>
                                                 <option value="2">II</option>
+                                                <option value="3">III</option>
+                                                <option value="4">IV</option>
+                                                <option value="5">V</option>
+                                                <option value="6">VI</option>
                                             </select>
                                         </div>
                                     </div>
