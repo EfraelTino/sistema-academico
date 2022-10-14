@@ -138,12 +138,7 @@
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12"> Año de ingreso: </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select id="anio_ingreso" required="" name="anio_ingreso" class="form-control col-md-7 col-xs-12" type="number">
-                                                <option value="1">2022 </option>
-                                                <option value="2">2021</option>
-                                                <option value="3">2020</option>
-                                                <option value="4">2019</option>
-                                            </select>
+                                            <input id="anio_ingreso"  type ="date" required="" name="anio_ingreso" class="form-control col-md-7 col-xs-12" type="number" />
                                         </div>
                                     </div>
                                     <div class="item form-group">
