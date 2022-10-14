@@ -1,13 +1,13 @@
 <?php
 //conexion a la db: server-user-password-db
-    $conexion =mysqli_connect("localhost","root","","sis_aca");
+    $conexion =mysqli_connect("localhost","root","root","sis_aca");
 
 
-    //if($conexion){
-      //  echo "conexion exitosa ";
-    //}else{
-      //  echo "conexion fallida ";
-    //}
+    if($conexion){
+        echo "conexion exitosa ";
+    }else{
+      echo "conexion fallida ";
+    }
 
     //CONSULTA DE TIPO SELECT A LA BASE DE DATOS -guardamos nuestra consulta en una variable
     //$consulta = "SELECT * FROM estudiante";  
