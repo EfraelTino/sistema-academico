@@ -95,11 +95,11 @@
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Nombres y apellidos<span class="required">:</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" id="email" name="nombre" required="" class="form-control col-md-7 col-xs-12">
+                                            <input type="text" id="nombre" name="nombre" required="" class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label for="password" class="control-label col-md-3">Género:</label>
+                                        <label for="genero" class="control-label col-md-3">Género:</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <select type="number" name="genero" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="">
                                                 <option value="1">Masculino</option>
@@ -108,35 +108,33 @@
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Fecha de Nacimiento<span class="required">:</span>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="fecha">Fecha de Nacimiento<span class="required">:</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="date" id="email2" name="fecha" data-validate-linked="email" required="" class="form-control col-md-7 col-xs-12">
+                                            <input type="date" id="fecha" name="fecha" data-validate-linked="fecha" required="" class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Dirección<span class="required">:</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" id="number" name="direccion" required="" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12">
+                                            <input type="text" id="direccion" name="direccion" required="" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">Correo<span class="required">:</span>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="correo">Correo<span class="required">:</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="email" id="website" name="correo" required="" placeholder="youremail@example.com" class="form-control col-md-7 col-xs-12">
+                                            <input type="email" id="correo" name="correo" required="" placeholder="youremail@example.com" class="form-control col-md-7 col-xs-12">
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="occupation">Teléfono<span class="required">:</span>
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telefono">Teléfono<span class="required">:</span>
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="occupation" type="number" name="telefono" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12 telefono" placeholder="915 068 001" id="telefono" maxlength="9" />
+                                            <input id="telofono" type="number" name="telefono" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12 telefono" placeholder="915 068 001" maxlength="9" />
                                         </div>
                                     </div>
-
-
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12"> Año de ingreso: </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -156,30 +154,30 @@
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Turno
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="turno">Turno
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select id="cargo" required="" name="turno" class="form-control col-md-7 col-xs-12" type="text">
+                                            <select id="turno" required="" name="turno" class="form-control col-md-7 col-xs-12" type="text">
                                                 <option value="1">MAÑANA </option>
                                                 <option value="2">TARDE</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Discapacidad
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="discapacidad">Discapacidad
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select id="cargo" required="" name="discapacidad" class="form-control col-md-7 col-xs-12" type="text">
+                                            <select id="discapacidad" required="" name="discapacidad" class="form-control col-md-7 col-xs-12" type="text">
                                                 <option value="1">SI</option>
                                                 <option value="2">NO</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Programa de estudios:
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="programa">Programa de estudios:
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select id="cargo" required="" name="programa" class="form-control col-md-7 col-xs-12" type="number">
+                                            <select id="programa" required="" name="programa" class="form-control col-md-7 col-xs-12" type="number">
                                                 <option value="1">Diseño y Programación web</option>
                                                 <option value="2">Enfermería Técnica</option>
                                                 <option value="3">Industrias alimentarias</option>
@@ -189,10 +187,10 @@
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Semestre
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="semestre">Semestre
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select id="cargo" required="" name="semestre" class="form-control col-md-7 col-xs-12" type="number">
+                                            <select id="semestre" required="" name="semestre" class="form-control col-md-7 col-xs-12" type="number">
                                                 <option value="1">I</option>
                                                 <option value="2">II</option>
                                                 <option value="3">III</option>
@@ -203,10 +201,10 @@
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Condicion 
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="condicion">Condicion 
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select id="cargo" required="" name="condicion" class="form-control col-md-7 col-xs-12" type="number">
+                                            <select id="condicion" required="" name="condicion" class="form-control col-md-7 col-xs-12" type="number">
                                                 <option value="1">Regular</option>
                                                 <option value="2">Irregular</option>
                                             </select>

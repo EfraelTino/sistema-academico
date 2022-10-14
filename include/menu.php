@@ -24,7 +24,7 @@
 <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Sistema Académico</span></a>
+              <a href="index.html" class="site_title"><i class="fa  fa-laptop"></i> <span>Sistema Académico</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -48,40 +48,29 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
-                    </ul>
+                  <li><a href="./index2.php"><i class="fa fa-home"></i> Inicio </a>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa  fa-institution"></i> Datos institucionales <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.html">General Form</a></li>
+                      <li><a href="carrera.php">Carreras</a></li>
+                      <li><a href="form.html">Modulos profesionales</a></li>
+                      <li><a href="form.html">semesytres</a></li>
+                      <li><a href="form.html">unidaddes didacticas</a></li>
                       <li><a href="form_advanced.html">Advanced Components</a></li>
                       <li><a href="components/registro_docente.php" onclick="{()=>components/registro_docente.php}">Registro de Docentes</a></li>
                       <li><a href="components/registro_estudiantes.php" onclick="{()=>components/registro_estudiantes.php}">  Registro de estudiantes</a></li>
-                      <li><a href="form_upload.html">Form Upload</a></li>
-                      <li><a href="form_buttons.html">Form Buttons</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa  fa-users"></i> Docentes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general_elements.html">General Elements</a></li>
-                      <li><a href="media_gallery.html">Media Gallery</a></li>
-                      <li><a href="typography.html">Typography</a></li>
-                      <li><a href="icons.html">Icons</a></li>
-                      <li><a href="glyphicons.html">Glyphicons</a></li>
-                      <li><a href="widgets.html">Widgets</a></li>
-                      <li><a href="invoice.html">Invoice</a></li>
-                      <li><a href="inbox.html">Inbox</a></li>
-                      <li><a href="calendar.html">Calendar</a></li>
+                      <li><a href="general_elements.html">docente</a></li>
+                      <li><a href="media_gallery.html">usuario docentes</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class=" fa fa-mortar-board"></i> Estudiantes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="tables.html">Tables</a></li>
-                      <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                      <li><a href="tables.html">estudiante</a></li>
+                      <li><a href="tables_dynamic.html">usuarios estudiantes</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>

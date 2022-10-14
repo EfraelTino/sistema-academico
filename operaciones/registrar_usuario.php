@@ -1,5 +1,5 @@
 <?php
-include "../conexion.php";
+include ('../include/conexion.php');
 
 //recibo el valor-dato de mi form del archivo de "crear_usuario" y lon guardo en una variable de acuerdo a los campos
 $docente = $_POST['docente'];

@@ -1,6 +1,6 @@
 <?php 
 //conexion
- include('../conexion.php');
+ include('../include/conexion.php');
 
   //recibir los valores o datos de mi formulario
       $usuario = $_POST['usuario'];
