@@ -10,8 +10,8 @@
         
     }
 
-    //neustro return lo almacenamos en una variable ya que sin ello no podriamos acceder a este mensaje
+    //nuestro return lo almacenamos en una variable ya que sin ello no podriamos acceder a este mensaje
 $mensaje = prueba(22, 'villanueva ', 'efrael');
-//imprimimos este mensaje
+//imprimimos este mensaje   
 echo $mensaje();
 ?>
