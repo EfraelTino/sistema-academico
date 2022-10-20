@@ -20,7 +20,7 @@ include ('../include/conexion.php');
     
     print $dni.$nombre.$genero.$fecha.$direccion.$correo.$telefono.$anio_ingreso.$seccion.$turno.$discapacidad.$programa.$semestre.$condicion;
     // insercion de datos
-    $sql = "INSERT INTO estudiante (dni, apellidos_nombre, id_genero, fecha_nac, direccion, correo, telefono, anio_ingreso, seccion, turno, discapacidad, id_prog_estudios, id_semestre,id_condicion) VALUES ('$dni', '$nombre','$genero','$fecha','$direccion','$correo','$telefono','$anio_ingreso','$seccion','$turno','$discapacidad','$programa','$semestre','$condicion' )";
+    $sql = "INSERT INTO estudiante (dni, apellidos_nombre, id_genero, fecha_nac, direccion, correo, telefono, anio_ingreso, seccion, discapacidad, id_prog_estudios, id_semestre,id_condicion, turno) VALUES ('$dni', '$nombre','$genero','$fecha','$direccion','$correo','$telefono','$anio_ingreso','$seccion','$discapacidad','$programa','$semestre','$condicion','$turno')";
 
     $ejecutar_consulta= mysqli_query($conexion, $sql);
     if($ejecutar_consulta){

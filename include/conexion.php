@@ -5,11 +5,11 @@
     // CAMBIOS REALIZADOS
 
 
-    if($conexion){
-        echo "conexion exitosa ";
-    }else{
-      echo "conexion fallida ";
-    }
+    //if($conexion){
+      //  echo "conexion exitosa ";
+    //}else{
+      //echo "conexion fallida ";
+    //}
 
     //CONSULTA DE TIPO SELECT A LA BASE DE DATOS -guardamos nuestra consulta en una variable
     //$consulta = "SELECT * FROM estudiante";  

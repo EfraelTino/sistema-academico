@@ -90,7 +90,6 @@
 
                 </ul>
               </div>
-              <?php include('../components/registro_docente.php')?>
             </div>
             <!-- /sidebar menu -->
 

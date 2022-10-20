@@ -1,4 +1,5 @@
 <?php 
+    //bloque de codigo que realiza una funcuin
     //aca se realizara toda la busqueda, esto se hace con funciones
     //parametros -> datos que necesita una funcion para ejecutarse
     function prueba ($nombre, $apellido, $edad){
@@ -9,9 +10,9 @@
         return 'hola '.$nombre.$apellido.$edad;
         
     }
-
+    
     //nuestro return lo almacenamos en una variable ya que sin ello no podriamos acceder a este mensaje
-$mensaje = prueba(22, 'villanueva ', 'efrael');
-//imprimimos este mensaje   
-echo $mensaje();
+    $mensaje = prueba(22, 'villanueva ', 'efrael');
+    //imprimimos este mensaje   
+    echo $mensaje();
 ?>

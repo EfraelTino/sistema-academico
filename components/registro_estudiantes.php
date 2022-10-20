@@ -1,3 +1,7 @@
+<?php
+include('../include/conexion.php');
+include('../include/busqueda.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,8 +106,20 @@
                                         <label for="genero" class="control-label col-md-3">Género:</label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <select type="number" name="genero" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="">
-                                                <option value="1">Masculino</option>
-                                                <option value="2">Femenino</option>
+                                                <option value="">Prueba</option>
+                                                <?php
+                                                //ENVIAMOS LO QUE NUESTRA FUNCION PIDE EN ESTE CASO LA CONEXION 
+                                                $buscar_genero = buscarGenero($conexion);
+                                                //HACEMOS NUESTRO BUCLE
+                                                //
+                                                while ($res_b_genero = mysqli_fetch_array($buscar_genero)) {
+                                                    //IMPRIMIMOS NUESTRO ID COMO PRUEBA
+                                                    //echo $res_b_genero['id'];
+                                                ?>
+                                                   <option value='<?php echo $res_b_genero ['id'] ?>'><?php echo $res_b_genero ['ref_genero'] ?></option>
+                                                <?php
+                                                };
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -138,7 +154,7 @@
                                     <div class="item form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12"> Año de ingreso: </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input id="anio_ingreso"  type ="date" required="" name="anio_ingreso" class="form-control col-md-7 col-xs-12" type="number" />
+                                            <input id="anio_ingreso" type="date" required="" name="anio_ingreso" class="form-control col-md-7 col-xs-12" type="number" />
                                         </div>
                                     </div>
                                     <div class="item form-group">
@@ -153,8 +169,20 @@
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <select id="turno" required="" name="turno" class="form-control col-md-7 col-xs-12" type="text">
-                                                <option value="1">MAÑANA </option>
-                                                <option value="2">TARDE</option>
+                                            <option value="">Seleccionar truno</option>
+                                                <?php
+                                                //ENVIAMOS LO QUE NUESTRA FUNCION PIDE EN ESTE CASO LA CONEXION 
+                                                $buscar_turno = buscarTurno($conexion);
+                                                //HACEMOS NUESTRO BUCLE
+                                                //
+                                                while ($res_b_turno = mysqli_fetch_array($buscar_turno)) {
+                                                    //IMPRIMIMOS NUESTRO ID COMO PRUEBA
+                                                    //echo $res_b_genero['id'];
+                                                ?>
+                                                    <option value='<?php echo $res_b_turno['id']; ?>'><?php echo $res_b_turno['turno']; ?></option>
+                                                <?php
+                                                };
+                                                ?>
                                             </select>
                                         </div>
                                     </div>
@@ -196,7 +224,7 @@
                                         </div>
                                     </div>
                                     <div class="item form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="condicion">Condicion 
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="condicion">Condicion
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <select id="condicion" required="" name="condicion" class="form-control col-md-7 col-xs-12" type="number">
@@ -205,14 +233,14 @@
                                             </select>
                                         </div>
                                     </div>
-                                        <br><br>
-                                        <div class="ln_solid"></div>
-                                        <div class="form-group">
-                                            <div class="col-md-6 col-md-offset-3">
-                                                <button class="btn btn btn-danger" onClick="limpiar()" type="reset">Cancelar</button>
-                                                <button id="send" type="submit" class="btn btn-success">Registrar</button>
-                                            </div>
+                                    <br><br>
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-md-offset-3">
+                                            <button class="btn btn btn-danger" onClick="limpiar()" type="reset">Cancelar</button>
+                                            <button id="send" type="submit" class="btn btn-success">Registrar</button>
                                         </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
