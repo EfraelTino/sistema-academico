@@ -1,42 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Gentelella Alela! | </title>
-
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
-  </head>
-
-  <body class="nav-md">
-<div class="col-md-3 left_col">
+        <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa  fa-laptop"></i> <span>Sistema Académico</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
             </div>
 
             <div class="clearfix"></div>
-
+            <?php
+            $buscar_docente_sesion = buscarDocenteById($conexion, $_SESSION['id_usu_sisacad_iesthuanta']);
+            $res_b_u_s = mysqli_fetch_array($buscar_docente_sesion);
+             ?>
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="Gentella/production/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Bienvenido,</span>
-                <h2>
+                <span>Welcome,</span>
+                <h2><?php echo $res_b_u_s['apellidos_nombres']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -48,46 +28,42 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="./index2.php"><i class="fa fa-home"></i> Inicio </a>
+                  <li><a href="index.php"><i class="fa fa-home"></i> Inicio </a>
+
                   </li>
-                  <li><a><i class="fa  fa-institution"></i> Datos institucionales <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Datos Institucionales <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                    <li><a href="datos_institucionales.php">Datos institucionales</a></li>
-                    <li><a href="periodo_academico.php">Periodo Académico</a></li>
-                    <li><a href="presente_periodo_academico.php">Presente Periodo Académico</a></li>
-                      <li><a href="programa_estudios.php">Programa de estudios</a></li>
-                      <li><a href="modulos.php">Modulos profesionales</a></li>
-                      <li><a href="semestres.php">semesytres</a></li>
-                      <li><a href="unidaddes_didacticas.php">unidaddes didacticas</a></li>
+                      <li><a href="datos_institucionales.php">Datos Institucionales</a></li>
+                      <li><a href="periodo_academico.php">Periodo Académico</a></li>
+                      <li><a href="presente_per_acad.php">Presente Periodo Académico</a></li>
+                      <li><a href="programa_estudios.php">Programa de Estudios</a></li>
+                      <li><a href="modulo_formativo.php">Modulos formativos</a></li>
+                      <li><a href="semestre.php">Semestre</a></li>
+                      <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
                       <li><a href="cargo.php">Cargo</a></li>
-                      <li><a href="genero.php">Genero</a></li>
-
-
-                      <li><a href="components/registro_docente.php" onclick="{()=>components/registro_docente.php}">Registro de Docentes</a></li>
-                      <li><a href="components/registro_estudiantes.php" onclick="{()=>components/registro_estudiantes.php}">  Registro de estudiantes</a></li>
+                      <li><a href="genero.php">Género</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa  fa-users"></i> Programación académica <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-desktop"></i> Programación Académica <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="prog_uni_didact.php">Programacio de unidades didacticas</a></li>
-                      <li><a href="matricula.php">Matricula</a></li>
-                      <li><a href="calificaciones.php">Calificaciones</a></li>
-                      <li><a href="condicion.php">Condicion</a></li>
+                      <li><a href="prog_ud.php">Programación de Unidades Didacticas</a></li>
+                      <li><a href="matricula.php"> Matrícula</a></li>
+                      <li><a href="calificacion.php"> Calificaciones</a></li>
+                      <li><a href="condicion.php"> Condición</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa  fa-users"></i> Docentes <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-desktop"></i> Docentes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="docente.php">docente</a></li>
-                      <li><a href="usuario_docente.php">usuario docentes</a></li>
+                      <li><a href="docentes.php">Docente</a></li>
+                      <li><a href="usuarios_docentes.php">Usuarios Docentes</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=" fa fa-mortar-board"></i> Estudiantes <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-book"></i> Estudiantes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="estudiante.php">estudiante</a></li>
-                      <li><a href="usuario_estudiantes.php">usuarios estudiantes</a></li>
+                      <li><a href="estudiantes.php">Estudiante</a></li>
+                      <li><a href="usuario_estudiantes.php">Usuarios Estudiante</a></li>
                     </ul>
                   </li>
-
                 </ul>
               </div>
             </div>
@@ -111,8 +87,7 @@
             <!-- /menu footer buttons -->
           </div>
         </div>
-                        <!--TERMINA EL BASHBOARD-->
-                      <!-- top navigation -->
+        <!-- top navigation -->
         <div class="top_nav">
           <div class="nav_menu">
             <nav>
@@ -123,7 +98,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">John Doe
+                    <img src="Gentella/production/images/img.jpg" alt=""><?php echo $res_b_u_s['apellidos_nombres']; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -135,7 +110,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="operaciones/cerrar_sesion.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
@@ -171,7 +146,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="Gentella/production/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -183,7 +158,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="Gentella/production/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>

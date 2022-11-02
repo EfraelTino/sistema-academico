@@ -1,7 +1,11 @@
 <?php
-include "include/verificar_sesion.php";
 include "include/conexion.php";
 include "include/busquedas.php";
+include "include/verificar_sesion.php";
+
+$id_programa = $_GET['id'];
+$busc_programa = buscarProgramaById($conexion, $id_programa);
+$res_b_programa = mysqli_fetch_array($busc_programa);
 
 ?>
 <!DOCTYPE html>
@@ -37,11 +41,61 @@ include "include/busquedas.php";
         <!-- Menu en la parte superior -->
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-12">
-              <?php echo $_SESSION['id_usu_sisacad_iesthuanta']; ?>
+        <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Editar Estudiante</h2>
+                    
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_programa.php">
+                    <input type="hidden" name="id" value="<?php echo $id_programa;?>">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Codigo :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="codigo" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_programa['codigo']; ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tipo :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="tipo" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_programa['tipo']; ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nombre :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="nombre" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_programa['nombre']; ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Resolucion :
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="resolucion" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_programa['resolucion']; ?>">
+                        </div>
+                      </div>
+                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-primary" type="button">Cancelar</button>
+						              <button class="btn btn-primary" type="reset">Limpiar</button>
+                          <button type="submit" class="btn btn-success">Actualizar Datos</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
         <!-- /page content -->
         <!-- footer content -->
