@@ -93,4 +93,14 @@ function buscarPeriodoAcademico( $conexion){
     $sql = "SELECT*FROM periodo_academico";
     return mysqli_query($conexion, $sql);
 }
+function buscarPeriodoAcademicoById( $conexion, $id){
+    $sql = "SELECT * FROM periodo_academico WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
+
+//busacr modulo
+function buscarModuloById ($conexion){
+    $sql = "SELECT *FROM modulo_profesional";
+    return mysqli_query($conexion, $sql);
+}
 ?>

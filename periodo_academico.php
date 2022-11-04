@@ -48,7 +48,7 @@ include('include/verificar_sesion.php');
                                 <h2>Periodos Académicos</h2>
                                 <ul class="nav navbar-right">
                                     <li>
-                                        <a href="programas.php" class="btn btn-success">Agregar Nuevo</a>
+                                        <a href="./re_periodo_academico.php" class="btn btn-success">Agregar Nuevo</a>
                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>
@@ -69,19 +69,23 @@ include('include/verificar_sesion.php');
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $b_periodo = buscarPeriodoAcademico($conexion);
-                                        while ($res_b_pe_academico = mysqli_fetch_array($b_periodo)) {
+                                        $b_p_academico = buscarPeriodoAcademico($conexion);
+                                        while ($res_b_p_acad= mysqli_fetch_array($b_p_academico)) {
                                         ?>
                                             <tr>
-                                                <td><?php echo $$res_b_pe_academico['id']; ?></td>
-                                                <td><?php echo $$res_b_pe_academico['nombre']; ?></td>
-                                                <td><?php echo $$res_b_pe_academico['fecha_inicio']; ?></td>
-                                                <td><?php echo $$res_b_pe_academico['fecha_fin']; ?></td>
-                                                <td><?php echo $$res_b_pe_academico['director']; ?></td>
-                                                <td><?php echo $$res_b_pe_academico['fecha_actas']; ?></td>
+                                                <td><?php echo $res_b_p_acad['id']; ?></td>
+                                                <td><?php echo $res_b_p_acad['nombre']; ?></td>
+                                                <td><?php echo $res_b_p_acad['fecha_inicio']; ?></td>
+                                                <td><?php echo $res_b_p_acad['fecha_fin']; ?></td>
+                                                <?php 
+                                                $b_docente = buscarDocenteById($conexion, $res_b_p_acad['id']);
+                                                $res_b_id_d = mysqli_fetch_array($b_docente);
+                                                ?>
+                                                <td><?php echo $res_b_id_d['apellidos_nombres']; ?></td>
+                                                <td><?php echo $res_b_p_acad['fecha_actas']; ?></td>
                                                 <td>
                                                     <span class="justify-center">
-                                                    <a href="editar_prgrama.php?id=<?php echo $res_b_pro['id']; ?>" class="btn btn-primary">Editar</a>
+                                                    <a href="editar_p_academico.php?id=<?php echo $res_b_p_acad['id']; ?>" class="btn btn-primary">Editar</a>
                                                 </td>
                                             </tr>
                                         <?php

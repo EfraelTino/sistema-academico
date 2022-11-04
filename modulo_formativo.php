@@ -4,8 +4,7 @@ include('./include/busquedas.php');
 include('include/verificar_sesion.php');
 
 
-$b_programa = buscarProgramaById($conexion, $id_programa_estudio);
-$res_b_id = mysqli_fetch_array($b_programa);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +49,7 @@ $res_b_id = mysqli_fetch_array($b_programa);
                                 <h2>Módulos Formativos</h2>
                                 <ul class="nav navbar-right">
                                     <li>
-                                        <a href="programas.php" class="btn btn-success">Agregar Nuevo</a>
+                                        <a href="./registrar_modulo.php" class="btn btn-success">Agregar Nuevo</a>
                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>
@@ -74,12 +73,16 @@ $res_b_id = mysqli_fetch_array($b_programa);
                                         ?>
                                             <tr>
                                                 <td><?php echo $res_b_mod['id']; ?></td>
-                                                <td><?php echo $res_b_mod['id_programa_estudio']; ?></td>
+                                                <?php 
+                                                $b_programa = buscarProgramaById($conexion, $res_b_mod['id_programa_estudio']);
+                                                $res_b_id = mysqli_fetch_array($b_programa);
+                                                ?>
+                                                <td><?php echo $res_b_id['nombre']; ?></td>
                                                 <td><?php echo $res_b_mod['nro_modulo'];  ?></td>
                                                 <td><?php echo $res_b_mod['descripcion']; ?></td>
                                                 <td>
                                                     <span class="justify-center">
-                                                    <a href="/" class="btn btn-primary">Editar</a>
+                                                    <a href="editar_modulos.php?id=<?php echo $res_b_mod['id']; ?>" class="btn btn-primary">Editar</a>
                                                 </td>
                                             </tr>
                                         <?php
