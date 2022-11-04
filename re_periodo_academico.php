@@ -106,17 +106,16 @@ include "include/verificar_sesion.php";
 															<label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Director<span class="required">:</span>
 															</label>
 															<div class="col-md-6 col-sm-6 col-xs-12">
-																<select type="text" id="director" name="director"class="form-control col-md-7 col-xs-12">
+																<select type="text" id="director" name="director" class="form-control col-md-7 col-xs-12">
 																	<option>Seleccionar director</option>
 																	<?php
-                                  $buscar_docente= buscarDocente($conexion);
-                                  while ($res_b_docente = mysqli_fetch_array($buscar_docente)) {
-                                  ?>
-                                    <option value='<?php echo $res_b_docente['id'] ?>'><?php echo $res_b_docente['apellidos_nombres'] ?></option>
-                                  <?php
-                                  };
-                                  ?>
-                                </select>
+																	$buscar_docente = buscarDocente($conexion);
+																	while ($res_b_docente = mysqli_fetch_array($buscar_docente)) {
+																	?>
+																		<option value='<?php echo $res_b_docente['id'] ?>'><?php echo $res_b_docente['apellidos_nombres'] ?></option>
+																	<?php
+																	};
+																	?>
 																</select>
 															</div>
 														</div>

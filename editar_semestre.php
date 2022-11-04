@@ -3,9 +3,9 @@ include "include/conexion.php";
 include "include/busquedas.php";
 include "include/verificar_sesion.php";
 
-$id_p_academico = $_GET['id'];
-$busc_p_academico = buscarPeriodoAcademicoById($conexion, $id_p_academico);
-$res_b_p_academico= mysqli_fetch_array($busc_p_academico);
+$id_semestre = $_GET['id'];
+$busc_semestre = buscarSemestreById($conexion, $id_semestre);
+$res_b_semestre = mysqli_fetch_array($busc_semestre);
 
 ?>
 <!DOCTYPE html>
@@ -45,65 +45,26 @@ $res_b_p_academico= mysqli_fetch_array($busc_p_academico);
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Editar Periodo Académico</h2>
+                    <h2>Editar Estudiante</h2>
                     
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_p_acad.php">
-                        <input type="text" name="id" value="<?php echo $id_p_academico;?>">
+                    <form class="form-horizontal form-label-left" method="POST" action="./operaciones/actualizar_semestre.php">
+                    <input type="text" name="id" value="<?php echo $id_semestre;?>">
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Periodo Academico:
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Codigo :
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" name="nombre" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_p_academico['nombre']; ?>">
+                          <input type="text" name="descripcion" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_semestre['descripcion']; ?>">
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Fecha inicio :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_inicio" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_p_academico['fecha_inicio']; ?>">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Fecha Fin :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_fin" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_p_academico['fecha_fin']; ?>">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-															<label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Director<span class="required">:</span>
-															</label>
-															<div class="col-md-6 col-sm-6 col-xs-12">
-																<select type="text" id="director" name="director"class="form-control col-md-7 col-xs-12">
-																	<option>Seleccionar director</option>
-																	<?php
-                                  $buscar_docente= buscarDocente($conexion);
-                                  while ($res_b_docente = mysqli_fetch_array($buscar_docente)) {
-                                  ?>
-                                    <option value='<?php echo $res_b_docente['id'] ?>'><?php echo $res_b_docente['apellidos_nombres'] ?></option>
-                                  <?php
-                                  };
-                                  ?>
-                                </select>
-																</select>
-															</div>
-														</div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Fecha Actas :
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" name="fecha_actas" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_p_academico['fecha_actas']; ?>">
-                        </div>
-                      </div>
+                        </div>          
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancelar</button>
-						  <button class="btn btn-primary" type="reset">Limpiar</button>
+						              <button class="btn btn-primary" type="reset">Limpiar</button>
                           <button type="submit" class="btn btn-success">Actualizar Datos</button>
                         </div>
                       </div>

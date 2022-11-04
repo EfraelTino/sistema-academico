@@ -44,10 +44,10 @@ include('include/verificar_sesion.php');
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Cargos</h2>
+                                <h2>Géneros</h2>
                                 <ul class="nav navbar-right">
                                     <li>
-                                        <a href="programas.php" class="btn btn-success">Agregar Nuevo</a>
+                                        <a href="re_genero.php" class="btn btn-success">Agregar Nuevo</a>
                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>
@@ -72,7 +72,7 @@ include('include/verificar_sesion.php');
                                                 <td><?php echo $res_b_genero['genero']; ?></td>
                                                 <td>
                                                     <span class="justify-center">
-                                                    <a href="editar_prgrama.php?id=<?php echo $res_b_pro['id']; ?>" class="btn btn-primary">Editar</a>
+                                                    <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary">Editar</a>
                                                 </td>
                                             </tr>
                                         <?php

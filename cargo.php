@@ -47,7 +47,7 @@ include('include/verificar_sesion.php');
                                 <h2>Cargos</h2>
                                 <ul class="nav navbar-right">
                                     <li>
-                                        <a href="programas.php" class="btn btn-success">Agregar Nuevo</a>
+                                        <a href="re_cargo.php" class="btn btn-success">Agregar Nuevo</a>
                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>
@@ -72,7 +72,7 @@ include('include/verificar_sesion.php');
                                                 <td><?php echo $res_b_cargo['descripcion']; ?></td>
                                                 <td>
                                                     <span class="justify-center">
-                                                    <a href="editar_prgrama.php?id=<?php echo $res_b_pro['id']; ?>" class="btn btn-primary">Editar</a>
+                                                    <a href="editar_cargo.php?id=<?php echo $res_b_cargo['id']; ?>" class="btn btn-primary">Editar</a>
                                                 </td>
                                             </tr>
                                         <?php

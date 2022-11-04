@@ -8,10 +8,19 @@
         //RETORNAR Y EJECUTAR CONSULTA
         return mysqli_query($conexion, $sql);
     }
+    function buscarGeneroById($conexion, $id){
+        $sql = "SELECT *FROM genero WHERE id='$id'";
+        return mysqli_query($conexion, $sql);
+    }
 function buscarCargo($conexion){
     $sql = "SELECT * FROM cargo";
     return mysqli_query($conexion, $sql);
 }
+function buscarCargoById($conexion, $id){
+    $sql ="SELECT * FROM cargo WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
+
 function buscarProgramaEstudio($conexion){
     $sql = "SELECT * FROM programa_estudios";
     return mysqli_query($conexion, $sql);
@@ -76,6 +85,11 @@ function buscarDatoInstitucional($conexion){
     $sql = "SELECT*FROM datos_institucionales";
     return mysqli_query($conexion, $sql);
 }
+//buscar datos instit
+function buscarDInstitiByCodigo($conexion, $codigo){
+    $sql = "SELECT*FROM datos_institucionales WHERE cod_modular = '$codigo'";
+    return mysqli_query($conexion, $sql);
+}
 
 //BUSCAR MODULOS
 function buscarModulo($conexion){
@@ -98,9 +112,14 @@ function buscarPeriodoAcademicoById( $conexion, $id){
     return mysqli_query($conexion, $sql);
 }
 
+//buscar semestre
+function buscarSemestreById($conexion, $id){
+    $sql = "SELECT *FROM semestre WHERE id= '$id'";
+    return mysqli_query($conexion, $sql);
+}
+
 //busacr modulo
 function buscarModuloById ($conexion){
     $sql = "SELECT *FROM modulo_profesional";
     return mysqli_query($conexion, $sql);
 }
-?>

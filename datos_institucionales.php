@@ -79,7 +79,7 @@ include ('include/verificar_sesion.php');
                           <td><?php echo $res_b_datos['correo']; ?></td>
                           <td><?php echo $res_b_datos['nro_resolucion']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_datos['cod_modular']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="editar_d_insti.php?id=<?php echo $res_b_datos['cod_modular']; ?>" class="btn btn-primary">Editar</a>
                           </td>
                         </tr>
                         <?php
