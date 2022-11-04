@@ -1,7 +1,7 @@
 <?php
 include('../include/conexion.php');
 include('../include/busquedas.php');
-$dni = $_POST['dni'];
+$dni = $_POST['dni_docente'];
 $nombre = $_POST['nombre'];
 $fecha = $_POST['fecha'];
 $direccion = $_POST['direccion'];
@@ -12,7 +12,8 @@ $condicion = $_POST['condicion'];
 $nivel = $_POST['nivel'];
 $cargo = $_POST['cargo'];
 
-$b_docente_dni = buscarDocenteById($conexion, $dni);
+
+$b_docente_dni = buscarDocenteByDni($conexion, $dni);
 $c_r_b_docente = mysqli_num_rows($b_docente_dni);
 
 if ($c_r_b_docente == 0) {
@@ -20,7 +21,7 @@ if ($c_r_b_docente == 0) {
 
     $ejecutar_insertar = mysqli_query($conexion, $insert);
     //registro user_docente
-    $b_id_docente = buscarDocenteById($conexion, $dni);
+    $b_id_docente = buscarDocenteByDni($conexion, $dni);
     $res_b_docente = mysqli_fetch_array($b_id_docente);
     
     $id_docente = $res_b_docente['id'];
@@ -38,14 +39,14 @@ if ($c_r_b_docente == 0) {
     			</script>";
 	}else{
 		echo "<script>
-			alert('Error al registrar usuario');
+			alert('Error al registrar el usuario del docente');
 			window.history.back();
 			</script>
 			";
 	}
 }else{
 	echo "<script>
-			alert('El estudiante ya existe, error al guardar');
+			alert('El docente ya existe, error al guardar');
 			window.history.back();
 			</script>
 			";

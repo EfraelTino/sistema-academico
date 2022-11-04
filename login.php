@@ -30,7 +30,10 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form method="POST" action="operaciones/iniciar_sesion.php">
+            <center>
+              <img src="./img/logo.png" alt="logo_instituto"  width="150px"/>
+            </center>
+            <form method="POST" action="operaciones/iniciar_sesion.php" class="col-sm-6 col-md-12">
               <h1>Inicio de Sesión</h1>
               <div>
                 <input type="text" name="usuario" class="form-control" placeholder="Usuario" required="" />
@@ -40,22 +43,24 @@
               </div>
               <div>
                 <button type="submit">Iniciar Sesión</button>
-                <a class="reset_pass" href="#">Olvidaste tu contraseña?</a>
+                <!--<a class="reset_pass" href="#">Olvidaste tu contraseña?</a>-->
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Nuevo en el sitio?
-                  <a href="crear_usuario.php" class="to_register"> Crear Cuenta </a>
-                </p>
+                <!-- <p class="change_link">Nuevo en el sitio?
+                  <a href="crear_usuario.php" class="to_register d-flex " 
+                  style="align-items:center"
+                  > Crear Cuenta </a>
+                </p>-->
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <h2><i class="fa fa-home"></i > Insituto de Educación Superior Tecnológico Público "Huanta"</h2>
+                  <p>©2022 Bienvenido a la plataforma de Portafolio Docente, Inicie Sesion para acceder en modo Administrador</p>
                 </div>
               </div>
             </form>

@@ -44,7 +44,7 @@ include('include/verificar_sesion.php');
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="x_panel">
 							<div class="x_title">
-								<h2>Usuario de los docentes</h2>
+								<h2>Usuario de los Estudiantes</h2>
 								<ul class="nav navbar-right">
 									<li>
 										<a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
@@ -66,25 +66,30 @@ include('include/verificar_sesion.php');
 									</thead>
 									<tbody>
 										<?php
-										$b_u_estudiantes = buscarUserEstudiante($conexion);
-										while ($res_b_u_estudiante = mysqli_fetch_array($b_u_estudiantes)) {
+										$b_u_docentes = buscarUserDocente($conexion);
+										while ($res_b_u_docente = mysqli_fetch_array($b_u_docentes)) {
 										?>
 											<tr>
-												<td><?php echo $res_b_u_estudiante['id']; ?></td>
-												<td><?php echo $res_b_u_estudiante['usuario']; ?></td>
+												<td><?php echo $res_b_u_docente['id']; ?></td>
+												<td><?php echo $res_b_u_docente['usuario']; ?></td>
 												<?php 
-													$b_estudiante = buscarEstudianteById($conexion, $res_b_u_estudiante['id_estudiante']);
-													$res_b_id_estudiante = mysqli_fetch_array($b_estudiante);
+													$b_docente = buscarDocenteById($conexion, $res_b_u_docente['id_docente']);
+													$res_b_id_docente = mysqli_fetch_array($b_docente);
 												?>
-												<td><?php echo $res_b_id_estudiante['apellidos_nombres'];  ?></td>
-												<td><?php echo $res_b_u_estudiante['password'];  ?></td>
+													<td>
+													<?php echo $res_b_id_docente['apellidos_nombres'];  ?>
+													</td>
+												<?php
+												
+												?>
+												<td><?php echo $res_b_u_docente['password']; ?></td>
 												<td>
-													<a href="editar_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-primary">Editar</a>
-													<a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-danger">Eliminar</a>
+													<a href="editar_docente.php?id=<?php echo $res_b_u_docente	['id']; ?>" class="btn btn-primary">Editar</a>
+													<a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_u_docente['id']; ?>" class="btn btn-danger">Eliminar</a>
 												</td>
 											</tr>
 										<?php
-										}
+										};
 										?>
 
 									</tbody>

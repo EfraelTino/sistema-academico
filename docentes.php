@@ -54,6 +54,7 @@ include ('include/verificar_sesion.php');
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
+                          <th>Identificador</th>
                           <th>DNI</th>
                           <th>APELLIDOS Y NOMBRES</th>
                           <th>DECHA DE NACIMIENTO</th>
@@ -72,20 +73,29 @@ include ('include/verificar_sesion.php');
                         $b_docente = buscarDocente($conexion);
                         while ($res_b_docente = mysqli_fetch_array($b_docente)) {
                         ?>
-                        <tr>
+                        <tr><td>
+                          <?php echo $res_b_docente['id']; ?></td>
                           <td><?php echo $res_b_docente['dni']; ?></td>
                           <td><?php echo $res_b_docente['apellidos_nombres'];  ?></td>
                           <td><?php echo $res_b_docente['fecha_nac']; ?></td>
                           <td><?php echo $res_b_docente['direccion']; ?></td>
                           <td><?php echo $res_b_docente['correo']; ?></td>
                           <td><?php echo $res_b_docente['telefono']; ?></td>
-                          <td><?php echo $res_b_docente['id_genero']; ?></td>
+                          <?php 
+                            $b_genero = buscarGeneroById($conexion, $res_b_docente['id_genero']);
+                            $res_b_id_genero = mysqli_fetch_array($b_genero);
+                          ?>
+                          <td><?php echo $res_b_id_genero['genero']; ?></td>
                           <td><?php echo $res_b_docente['nivel_educacion']; ?></td>
                           <td><?php echo $res_b_docente['cond_laboral']; ?></td>
-                          <td><?php echo $res_b_docente['id_cargo']; ?></td>
+                          <?php 
+                            $b_cargo = buscarCargoById($conexion, $res_b_docente['id_cargo']);
+                            $res_b_id_genero = mysqli_fetch_array($b_cargo);
+                          ?>
+                          <td><?php echo $res_b_id_genero['descripcion']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_docente['id']; ?>" class="btn btn-primary">Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_docente['id']; ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="editar_docente.php?id=<?php echo $res_b_docente['id']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_docente['id']; ?>" class="btn btn-danger">Eliminar</a>
                           </td>
                         </tr>
                         <?php

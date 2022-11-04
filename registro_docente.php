@@ -80,13 +80,12 @@ include "include/verificar_sesion.php";
                         </div>
                         <div class="x_content">
                           <form class="form-horizontal form-label-left" action="./operaciones/resgistrar_docente.php" method="POST" id="formulario_docente">
-                            <span class="section">Información del docente </span>
-
+                          
                             <div class="item form-group">
                               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">DNI<span class="required">:</span>
                               </label>
                               <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="dni_docente" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="dni" placeholder="Ingrese su DNI" required="" type="number" maxlength="8" ;>
+                                <input id="dni_docente" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="dni_docente" placeholder="Ingrese su DNI" required="" type="number" maxlength="8" ;>
                               </div>
                             </div>
                             <div class="item form-group">

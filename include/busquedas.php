@@ -80,7 +80,12 @@ function buscarDocenteByDni($conexion, $dni){
     return mysqli_query($conexion, $sql);
 }
 
-//BUSCAR PDATOS INSITUCIONALES
+function buscarUserDocente ($conexion){
+    $sql = "SELECT*FROM usuarios_docentes";
+    return mysqli_query($conexion, $sql);
+}
+
+//BUSCAR DATOS INSITUCIONALES
 function buscarDatoInstitucional($conexion){
     $sql = "SELECT*FROM datos_institucionales";
     return mysqli_query($conexion, $sql);
