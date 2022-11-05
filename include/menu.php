@@ -15,7 +15,7 @@
                 <img src="Gentella/production/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Welcome,</span>
+                <span>Bienvenido,</span>
                 <h2><?php echo $res_b_u_s['apellidos_nombres']; ?></h2>
               </div>
             </div>
@@ -44,14 +44,14 @@
                       <li><a href="genero.php">Género</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> Programación Académica <span class="fa fa-chevron-down"></span></a>
+                  <!--<li><a><i class="fa fa-desktop"></i> Programación Académica <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="prog_ud.php">Programación de Unidades Didacticas</a></li>
                       <li><a href="matricula.php"> Matrícula</a></li>
                       <li><a href="calificacion.php"> Calificaciones</a></li>
                       <li><a href="condicion.php"> Condición</a></li>
                     </ul>
-                  </li>
+                  </li>-->
                   <li><a><i class="fa fa-desktop"></i> Docentes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="docentes.php">Docente</a></li>
