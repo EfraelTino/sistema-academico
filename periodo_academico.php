@@ -76,7 +76,7 @@ include('include/verificar_sesion.php');
 												<td><?php echo $res_b_p_acad['fecha_inicio']; ?></td>
 												<td><?php echo $res_b_p_acad['fecha_fin']; ?></td>
 												<?php
-												$b_docente = buscarDocenteById($conexion, $res_b_p_acad['director']);
+												$b_docente = buscarDocenteById($conexion, $res_b_p_acad['id_director']);
 												$res_b_id = mysqli_fetch_array($b_docente);
 												?>
 												<td><?php echo $res_b_id['apellidos_nombres']; ?></td>

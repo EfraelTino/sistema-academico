@@ -44,7 +44,7 @@ include('include/verificar_sesion.php');
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="x_panel">
 							<div class="x_title">
-								<h2>Usuario de los Estudiantes</h2>
+								<h2>Usuario de los docentes</h2>
 								<ul class="nav navbar-right">
 									<li>
 										<a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
@@ -84,7 +84,7 @@ include('include/verificar_sesion.php');
 												?>
 												<td><?php echo $res_b_u_docente['password']; ?></td>
 												<td>
-													<a href="editar_docente.php?id=<?php echo $res_b_u_docente	['id']; ?>" class="btn btn-primary">Editar</a>
+													<a href="editar_usu_docente.php?id=<?php echo $res_b_u_docente	['id']; ?>" class="btn btn-primary">Editar</a>
 													<a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_u_docente['id']; ?>" class="btn btn-danger">Eliminar</a>
 												</td>
 											</tr>

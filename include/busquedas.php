@@ -142,3 +142,7 @@ function buscarPre_p_AcadById($conexion, $id){
     $sql = "SELECT * FROM presente_periodo_acad WHERE id='$id'";
     return mysqli_query($conexion, $sql);
 }
+function buscarUsuarioDocente ($conexion){
+    $sql = "SELECT * FROM usuarios_docentes";
+    return mysqli_query($conexion, $sql);
+}
