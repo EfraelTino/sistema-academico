@@ -1,3 +1,4 @@
+        
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
@@ -5,9 +6,13 @@
             </div>
 
             <div class="clearfix"></div>
+
             <?php
-            $buscar_docente_sesion = buscarDocenteById($conexion, $_SESSION['id_usu_sisacad_iesthuanta']);
-            $res_b_u_s = mysqli_fetch_array($buscar_docente_sesion);
+            $buscar_usu_docente_sesion = buscarUsuarioDocenteById($conexion, $_SESSION['id_usu_sisacad_iesthuanta']);
+            $res_b_u_s = mysqli_fetch_array($buscar_usu_docente_sesion);
+            $id_d_b_S = $res_b_u_s['id_docente'];
+            $buscar_docente_sesion = buscarDocenteById($conexion, $id_d_b_S);
+            $res_b_d_s = mysqli_fetch_array($buscar_docente_sesion);
              ?>
             <!-- menu profile quick info -->
             <div class="profile clearfix">
@@ -16,7 +21,7 @@
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2><?php echo $res_b_u_s['apellidos_nombres']; ?></h2>
+                <h2><?php echo $res_b_d_s['apellidos_nombres']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -98,7 +103,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="Gentella/production/images/img.jpg" alt=""><?php echo $res_b_u_s['apellidos_nombres']; ?>
+                    <img src="Gentella/production/images/img.jpg" alt=""><?php echo $res_b_d_s['apellidos_nombres']; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">

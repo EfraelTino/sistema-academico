@@ -72,7 +72,7 @@ function buscarDocente($conexion){
     return mysqli_query($conexion, $sql);
 }
 function buscarDocenteById($conexion, $id){
-    $sql = "SELECT * FROM docente WHERE id=$id";
+    $sql = "SELECT * FROM docente WHERE id='$id'";
     return mysqli_query($conexion, $sql);
 }
 function buscarDocenteByDni($conexion, $dni){
@@ -124,7 +124,21 @@ function buscarSemestreById($conexion, $id){
 }
 
 //busacr modulo
-function buscarModuloById ($conexion){
-    $sql = "SELECT *FROM modulo_profesional";
+function buscarModuloById ($conexion, $id){
+    $sql = "SELECT * FROM modulo_profesional WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
+
+function buscarUsuarioDocenteById($conexion, $id){
+    $sql = "SELECT * FROM usuarios_docentes  WHERE id= '$id'";
+    return mysqli_query($conexion, $sql);
+}
+
+function buscarPre_p_Acad($conexion){
+    $sql = "SELECT * FROM presente_periodo_acad";
+    return mysqli_query($conexion, $sql);
+}
+function buscarPre_p_AcadById($conexion, $id){
+    $sql = "SELECT * FROM presente_periodo_acad WHERE id='$id'";
     return mysqli_query($conexion, $sql);
 }

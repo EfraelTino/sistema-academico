@@ -1,6 +1,7 @@
 <?php
 include('../include/conexion.php');
 include('../include/busquedas.php');
+
 $dni = $_POST['dni_docente'];
 $nombre = $_POST['nombre'];
 $fecha = $_POST['fecha'];
@@ -13,13 +14,14 @@ $nivel = $_POST['nivel'];
 $cargo = $_POST['cargo'];
 
 
-$b_docente_dni = buscarDocenteByDni($conexion, $dni);
-$c_r_b_docente = mysqli_num_rows($b_docente_dni);
+$b_docente = buscarDocenteByDni($conexion, $dni);
+$c_r_b_docente = mysqli_num_rows($b_docente);
 
-if ($c_r_b_docente == 0) {
-    $insert = "INSERT INTO docente (dni, apellidos_nombres, fecha_nac, direccion, correo, telefono,	id_genero , nivel_educacion, cond_laboral, id_cargo ) VALUES ('$dni', '$nombre', '$fecha', '$direccion', '$correo', '$telefono', '$genero', '$condicion', '$nivel', '$cargo')";
 
-    $ejecutar_insertar = mysqli_query($conexion, $insert);
+if ($c_r_b_docente === 0) {
+    $insertar = "INSERT INTO docente (dni, apellidos_nombres, fecha_nac, direccion, correo, telefono,	id_genero, nivel_educacion, cond_laboral, id_cargo) VALUES ('$dni', '$nombre', '$fecha', '$direccion', '$correo', '$telefono', '$genero', '$condicion', '$nivel', '$cargo')";
+
+    $ejecutar_insertar = mysqli_query($conexion, $insertar);
     //registro user_docente
     $b_id_docente = buscarDocenteByDni($conexion, $dni);
     $res_b_docente = mysqli_fetch_array($b_id_docente);

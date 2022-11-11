@@ -43,11 +43,11 @@ include('include/verificar_sesion.php');
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
-                            <div class="x_title">
+                            <div class="x_title ">
                                 <h2>Géneros</h2>
                                 <ul class="nav navbar-right">
                                     <li>
-                                        <a href="re_genero.php" class="btn btn-success">Agregar Nuevo</a>
+                                        <a href="re_genero.php" class="btn ">Agregar Nuevo</a>
                                     </li>
                                 </ul>
                                 <div class="clearfix"></div>

@@ -47,14 +47,14 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="x_panel">
 							<div class="x_title">
-								<h2>Editar Estudiante</h2>
+								<h2>Editar datos del docente</h2>
 
 								<div class="clearfix"></div>
 							</div>
 							<div class="x_content">
 								<br />
 								<form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_docente.php">
-									<input type="text" name="id" value="<?php echo $id_docente; ?>">
+									<input type="hidden" name="id" value="<?php echo $id_docente; ?>">
 									<div class="form-group">
 										<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">DNI :
 										</label>
@@ -87,8 +87,7 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
 										<label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Correo :
 										</label>
 										<div class="col-md-6 col-sm-6 col-xs-12">
-											<input type="email" name="correo"
-											class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_docente['correo']; ?>">
+											<input type="email" name="correo" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_docente['correo']; ?>">
 										</div>
 									</div>
 									<div class="form-group">
@@ -110,9 +109,9 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
 													$id_genero_d = $res_b_genero_d['id'];
 												?>
 													<option value="<?php echo $res_b_genero_d['id']; ?>" <?php if ($id_genero_docente == $id_genero_d) {
-														echo "selected";
-														} 
-														?>>
+																																									echo "selected";
+																																								}
+																																								?>>
 														<?php echo $res_b_genero_d['genero']; ?></option>
 												<?php
 												};
@@ -138,14 +137,29 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
 										<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Cargo :
 										</label>
 										<div class="col-md-6 col-sm-6 col-xs-12">
-											<input type="text" name="id_cargo" maxlength="9" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_docente['id_cargo']; ?>">
+											<select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_docente['id_cargo']; ?>">
+												<option value="">Seleccione</option>
+												<?php
+												$id_cargo_d = $res_b_docente['id_cargo'];
+												$buscar_cargo = buscarCargo($conexion);
+												while ($res_b_cargo = mysqli_fetch_array($buscar_cargo)) {
+													$id_cargo = $res_b_cargo['id'];
+												?>
+													<option value="<?php echo $res_b_cargo['id']; ?>" <?php if ($id_cargo_d == $id_cargo) {
+														echo "selected";
+																																								}
+																																								?>>
+														<?php echo $res_b_cargo['descripcion']; ?></option>
+												<?php
+												};
+												?>
+											</select>
 										</div>
 									</div>
 									<div class="ln_solid"></div>
 									<div class="form-group">
 										<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
 											<button class="btn btn-primary" type="button">Cancelar</button>
-											<button class="btn btn-primary" type="reset">Limpiar</button>
 											<button type="submit" class="btn btn-success">Actualizar Datos</button>
 										</div>
 									</div>

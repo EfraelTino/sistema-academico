@@ -24,7 +24,7 @@ include ('include/verificar_sesion.php');
     <link href="Gentella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="Gentella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
     <link href="Gentella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="Gentella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="Gentella/vendors/datatables.net-responsivSe-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="Gentella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
@@ -33,7 +33,8 @@ include ('include/verificar_sesion.php');
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <?php include "include/menu.php" ?>  
+        <?php include "./include/menu.php" ?>  
+        
         <!-- Menu en la parte superior -->
         <!-- page content -->
         <div class="right_col" role="main">
@@ -41,7 +42,7 @@ include ('include/verificar_sesion.php');
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Datos Institucionales</h2>
+                    <h2>Datos institucionales</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -79,7 +80,7 @@ include ('include/verificar_sesion.php');
                           <td><?php echo $res_b_datos['correo']; ?></td>
                           <td><?php echo $res_b_datos['nro_resolucion']; ?></td>
                           <td>
-                            <a href="editar_d_insti.php?id=<?php echo $res_b_datos['cod_modular']; ?>" class="btn btn-primary">Editar</a>
+                            <a href="editar_d_insti.php?id=<?php echo $res_b_datos['cod_modular']; ?>" class="btn btn-success"> <i class="fa fa-edit"></i>Editar</a>
                           </td>
                         </tr>
                         <?php

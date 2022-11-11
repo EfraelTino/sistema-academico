@@ -6,6 +6,7 @@ include "include/verificar_sesion.php";
 $id_modulo = $_GET['id'];
 $busc_modulo = buscarModuloById($conexion, $id_modulo);
 $res_b_modulo = mysqli_fetch_array($busc_modulo);
+$id_prog_Estudios = $res_b_modulo['id_programa_estudio'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,16 +59,15 @@ $res_b_modulo = mysqli_fetch_array($busc_modulo);
 									<div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Programa de estudios:</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                        <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_modulo['id']; ?>">
+                        <select name="programa_estudio" id="programa_estudio" class="form-control col-md-7 col-xs-12" value="<?php echo $id_prog_Estudios; ?>">
                           <option value="">Seleccione</option>
                           <?php
-                          $id_mod_prof = $res_b_modulo['id'];
                           $buscar_programa = buscarProgramaEstudio($conexion);
                           while ($res_b_mod= mysqli_fetch_array($buscar_programa)) {
-                            $id_mod = $res_b_mod['id'];
+                            $id_p_estudios = $res_b_mod['id'];
                           ?>
-                          <option value="<?php echo $res_b_mod['id']; ?>" 
-                          <?php if ($id_mod_prof == $id_mod) {
+                          <option value="<?php echo $id_p_estudios; ?>" 
+                          <?php if($id_prog_Estudios === $id_p_estudios){
                             echo "selected";
                           } ?>
                           ><?php echo $res_b_mod['nombre']; ?></option>
