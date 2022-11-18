@@ -12,7 +12,7 @@ include('include/verificar_sesion.php');
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Gentelella Alela! | </title>
+	<title>Usuarios docentes | </title>
 	<!-- Bootstrap -->
 	<link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Font Awesome -->
@@ -47,7 +47,7 @@ include('include/verificar_sesion.php');
 								<h2>Usuario de los docentes</h2>
 								<ul class="nav navbar-right">
 									<li>
-										<a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
+										<a href="estudiante.php" class="btn btn-success"><i class="fa fa-plus-square"> </i> Agregar nuevo</a>
 									</li>
 								</ul>
 								<div class="clearfix"></div>
@@ -84,7 +84,7 @@ include('include/verificar_sesion.php');
 												?>
 												<td><?php echo $res_b_u_docente['password']; ?></td>
 												<td>
-													<a href="editar_usu_docente.php?id=<?php echo $res_b_u_docente	['id']; ?>" class="btn btn-primary">Editar</a>
+													<a href="editar_usu_docente.php?id=<?php echo $res_b_u_docente	['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
 													<a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_u_docente['id']; ?>" class="btn btn-danger">Eliminar</a>
 												</td>
 											</tr>

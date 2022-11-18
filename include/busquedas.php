@@ -146,3 +146,7 @@ function buscarUsuarioDocente ($conexion){
     $sql = "SELECT * FROM usuarios_docentes";
     return mysqli_query($conexion, $sql);
 }
+function buscarUdById ($conexion, $id){
+    $sql = "SELECT* FROM unidad_didactica WHERE id ='$id'";
+    return mysqli_query($conexion, $sql);
+}

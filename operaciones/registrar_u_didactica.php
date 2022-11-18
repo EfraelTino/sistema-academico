@@ -16,12 +16,12 @@ echo "Nombre:".$nombre." CARRERA:".$carrera." MODULO:".$modulo." SEMESTRE:".$sem
 $sql = "INSERT INTO unidad_didactica (descripcion, id_programa_estudio, id_modulo, id_semestre, creditos, horas, tipo, orden ) VALUES ('$nombre', '$carrera', '$modulo', '$semestre', '$creditos', '$horas', '$tipo', '$orden')";
 
 $ejec =mysqli_query($conexion, $sql);
-
 if ($sql) {
     echo "<script>
                 alert('Registro Exitoso');
-                window.location= '../u_didactica.php'
+                window.location= '../unidad_didactica.php'
     			</script>";
+                
 }else{
     echo "<script>
         alert('Error al registrar usuario');

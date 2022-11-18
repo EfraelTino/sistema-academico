@@ -13,7 +13,7 @@ include('include/verificar_sesion.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gentelella Alela! | </title>
+    <title>Género | </title>
     <!-- Bootstrap -->
     <link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -46,9 +46,7 @@ include('include/verificar_sesion.php');
                             <div class="x_title ">
                                 <h2>Géneros</h2>
                                 <ul class="nav navbar-right">
-                                    <li>
-                                        <a href="re_genero.php" class="btn ">Agregar Nuevo</a>
-                                    </li>
+                                <a href="re_genero.php" class="btn btn-success"><i class="fa fa-plus-square"> </i> Agregar nuevo</a>
                                 </ul>
                                 <div class="clearfix"></div>
                             </div>
@@ -72,7 +70,7 @@ include('include/verificar_sesion.php');
                                                 <td><?php echo $res_b_genero['genero']; ?></td>
                                                 <td>
                                                     <span class="justify-center">
-                                                    <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary">Editar</a>
+                                                    <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
                                                 </td>
                                             </tr>
                                         <?php

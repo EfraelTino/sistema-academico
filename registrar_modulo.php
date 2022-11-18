@@ -85,7 +85,7 @@ include "include/verificar_sesion.php";
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                    <button class="btn btn-primary" type="button">Cancelar</button>
+                                    <a class="btn btn-warning" type="button" href="./modulo_formativo.php">Cancelar</a>
                                     <button class="btn btn-primary" type="reset">Limpiar</button>
                                     <button type="submit" class="btn btn-success">Guardar</button>
                                 </div>

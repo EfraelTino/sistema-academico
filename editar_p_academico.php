@@ -55,7 +55,7 @@ $id_director = $res_b_p_academico['id_director'];
               <div class="x_content">
                 <br />
                 <form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_p_acad.php">
-                  <input type="text" name="id" value="<?php echo $id_p_academico; ?>">
+                  <input type="hidden" name="id" value="<?php echo $id_p_academico; ?>">
                   <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Periodo Academico:
                     </label>
@@ -110,8 +110,7 @@ $id_director = $res_b_p_academico['id_director'];
                   <div class="ln_solid"></div>
                   <div class="form-group">
                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                      <button class="btn btn-primary" type="button">Cancelar</button>
-                      <button class="btn btn-primary" type="reset">Limpiar</button>
+                      <a class="btn btn-warning" type="button" href="cargo.php">Cancelar</a>
                       <button type="submit" class="btn btn-success">Actualizar Datos</button>
                     </div>
                   </div>

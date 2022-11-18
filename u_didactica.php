@@ -48,7 +48,7 @@ include "include/verificar_sesion.php";
                             </div>
                             <div class="x_content">
                                 <br />
-                                <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_u_didactica.php">
+                                <form class="form-horizontal form-label-left" method="POST" action="operaciones/registrar_u_didactica.php" required>
                                 <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nombre :
                                         </label>
@@ -60,7 +60,7 @@ include "include/verificar_sesion.php";
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Carrera Profesional :
                                         </label>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <select type="text" name="carrera" class="form-control col-md-7 col-xs-12">
+                                            <select type="text" name="carrera" class="form-control col-md-7 col-xs-12" required>
                                             <option value="">Seleccionar Programa</option>
                                             <?php 
                                             $b_prog = buscarProgramaEstudio($conexion);
@@ -138,7 +138,7 @@ include "include/verificar_sesion.php";
                             <div class="ln_solid"></div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                    <button class="btn btn-primary" type="button">Cancelar</button>
+                                    <a href="./unidad_didactica.php" class="btn btn-warning" type="button">Cancelar</a>
                                     <button class="btn btn-primary" type="reset">Limpiar</button>
                                     <button type="submit" class="btn btn-success">Guardar</button>
                                 </div>
