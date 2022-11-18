@@ -1,12 +1,12 @@
 <?php
 include "include/conexion.php";
-include "include/busquedas.php";
+include "./include/busquedas.php";
 include "include/verificar_sesion.php";
 
-$id_docente = $_GET['id'];
-$busc_docente = buscarUsuarioDocenteById($conexion, $id_docente);
-$res_b_user = mysqli_fetch_array($busc_docente);
-$id_user_docente = $res_b_user['id_docente'];
+$id_estudiante = $_GET['id'];
+$busc_estudiante= buscarUsuarioEstudianteById($conexion, $id_estudiante);
+$res_b_user = mysqli_fetch_array($busc_estudiante);
+
 
 ?>
 <!DOCTYPE html>
@@ -54,8 +54,8 @@ $id_user_docente = $res_b_user['id_docente'];
 							</div>
 							<div class="x_content">
 								<br />
-								<form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_usu_docente.php">
-									<input type="text" name="id" value="<?php echo $id_docente; ?>">
+								<form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_usu_estudiante.php">
+									<input type="text" name="id" value="<?php echo $id_estudiante;?>">
 									<!--<div class="form-group">
 										<label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nombres del docente :
 										</label>
@@ -78,13 +78,13 @@ $id_user_docente = $res_b_user['id_docente'];
 										<label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Contraseña :
 										</label>
 										<div class="col-md-6 col-sm-6 col-xs-12">
-											<input type="text" name="password" class="form-control col-md-7 col-xs-12">
+											<input type="password" name="password" class="form-control col-md-7 col-xs-12" >
 										</div>
 									</div>
 									<div class="ln_solid"></div>
 									<div class="form-group">
 										<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-											<a href="./usuarios_docentes.php" class="btn btn-warning" type="button">Cancelar</a>
+											<a href="./usuario_estudiantes.php" class="btn btn-warning" type="button">Cancelar</a>
 											<button type="submit" class="btn btn-success">Actualizar Datos</button>
 										</div>
 									</div>

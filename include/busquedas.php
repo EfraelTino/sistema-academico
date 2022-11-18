@@ -46,12 +46,20 @@ function buscarCondicion($conexion){
     $sql = "SELECT * FROM condicion";
     return mysqli_query($conexion, $sql);
 }
+function buscarCondicionById($conexion, $id){
+    $sql = "SELECT * FROM condicion WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
 function buscarEstudianteByDni($conexion, $dni){
     $sql = "SELECT * FROM estudiante WHERE dni='$dni'";
     return mysqli_query($conexion, $sql);
 }
 function buscarEstudianteById($conexion, $id){
     $sql = "SELECT * FROM estudiante WHERE id='$id'";
+    return mysqli_query($conexion, $sql);
+}
+function buscarUsuarioEstudianteById($conexion, $id){
+    $sql = "SELECT * FROM usuarios_estudiante WHERE id='$id'";
     return mysqli_query($conexion, $sql);
 }
 function buscarEstudianteByNombre($conexion, $nombre){

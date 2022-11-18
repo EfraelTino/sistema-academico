@@ -60,7 +60,6 @@ include('include/verificar_sesion.php');
 											<th>Id</th>
 											<th>Usuario</th>
 											<th>Nombres y apellidos</th>
-											<th>Contraseña</th>
 											<th>Acciones</th>
 										</tr>
 									</thead>
@@ -77,10 +76,9 @@ include('include/verificar_sesion.php');
 													$res_b_id_estudiante = mysqli_fetch_array($b_estudiante);
 												?>
 												<td><?php echo $res_b_id_estudiante['apellidos_nombres'];  ?></td>
-												<td><?php echo $res_b_u_estudiante['password'];  ?></td>
 												<td>
-													<a href="editar_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-primary">Editar</a>
-													<a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-danger">Eliminar</a>
+													<a href="editar_usu_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
+													<a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-danger"><i class="fa fa-trash"> </i> Eliminar</a>
 												</td>
 											</tr>
 										<?php

@@ -47,6 +47,7 @@
                       <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
                       <li><a href="cargo.php">Cargo</a></li>
                       <li><a href="genero.php">Género</a></li>
+                      <li><a href="condicion.php">Condición</a></li>
                     </ul>
                   </li>
                   <!--<li><a><i class="fa fa-desktop"></i> Programación Académica <span class="fa fa-chevron-down"></span></a>
@@ -121,7 +122,6 @@
 
                 <li role="presentation" class="dropdown">
                   <p href="javascript:;" class="dropdown-toggle info-number px-2" data-toggle="dropdown" aria-expanded="false">
-                    Hola
                   </p>
                 </li>
               </ul>

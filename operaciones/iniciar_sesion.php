@@ -12,6 +12,17 @@ if($contar_filas==1 && password_verify($password,$pass)){
     session_start();
     $_SESSION['id_usu_sisacad_iesthuanta'] = $resultado_consulta['id'];
     header("location: ../index.php");
-}else{
-   echo $resultado_consulta;
+}else if($contar_filas === 0 ){
+    echo "<script>
+    alert('El usuario no existe');
+    window.location= '../login.php';
+</script>
+";
+}else {
+    echo "<script>
+    alert('Usuario y/o contraseña incorrecto');
+    window.location= '../login.php';
+</script>";
+
 }
+

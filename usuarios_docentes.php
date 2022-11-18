@@ -47,7 +47,7 @@ include('include/verificar_sesion.php');
 								<h2>Usuario de los docentes</h2>
 								<ul class="nav navbar-right">
 									<li>
-										<a href="estudiante.php" class="btn btn-success"><i class="fa fa-plus-square"> </i> Agregar nuevo</a>
+										<a href="registro_docente.php" class="btn btn-success"><i class="fa fa-plus-square"> </i> Agregar nuevo</a>
 									</li>
 								</ul>
 								<div class="clearfix"></div>
@@ -60,7 +60,6 @@ include('include/verificar_sesion.php');
 											<th>Id</th>
 											<th>Usuario</th>
 											<th>Nombres y apellidos</th>
-											<th>Contraseña</th>
 											<th>Acciones</th>
 										</tr>
 									</thead>
@@ -82,10 +81,9 @@ include('include/verificar_sesion.php');
 												<?php
 												
 												?>
-												<td><?php echo $res_b_u_docente['password']; ?></td>
 												<td>
 													<a href="editar_usu_docente.php?id=<?php echo $res_b_u_docente	['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
-													<a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_u_docente['id']; ?>" class="btn btn-danger">Eliminar</a>
+													<a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_u_docente['id']; ?>" class="btn btn-danger"><i class="fa fa-trash"> </i> Eliminar</a>
 												</td>
 											</tr>
 										<?php
