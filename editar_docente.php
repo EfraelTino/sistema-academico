@@ -137,7 +137,7 @@ $res_b_docente = mysqli_fetch_array($busc_docente);
 										<label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Cargo :
 										</label>
 										<div class="col-md-6 col-sm-6 col-xs-12">
-											<select name="id_genero" id="id_genero" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_docente['id_cargo']; ?>">
+											<select name="id_cargo" id="id_cargo" class="form-control col-md-7 col-xs-12" value="<?php echo $res_b_docente['id_cargo']; ?>">
 												<option value="">Seleccione</option>
 												<?php
 												$id_cargo_d = $res_b_docente['id_cargo'];
