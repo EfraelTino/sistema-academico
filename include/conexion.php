@@ -1,6 +1,6 @@
 <?php
 //conexion a la db: server-user-password-db
-    $conexion =mysqli_connect("localhost","root","","sis_aca");
+    $conexion =mysqli_connect("localhost","desarro1_efrael ","XjKi^M,bAxHh","desarro1_efrael");
 
     // CAMBIOS REALIZADOS
 
