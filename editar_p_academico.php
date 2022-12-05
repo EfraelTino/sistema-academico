@@ -84,6 +84,7 @@ $id_director = $res_b_p_academico['id_director'];
                       <select type="text" id="director" name="director" class="form-control col-md-7 col-xs-12" value='<?php echo $id_director; ?>'>
                         <option>Seleccionar director</option>
                         <?php
+                        
                         $buscar_docente = buscarDocente($conexion);
                         while ($res_b_docente = mysqli_fetch_array($buscar_docente)) {
                           $id_b_director = $res_b_docente['id'];
@@ -110,7 +111,7 @@ $id_director = $res_b_p_academico['id_director'];
                   <div class="ln_solid"></div>
                   <div class="form-group">
                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                      <a class="btn btn-warning" type="button" href="cargo.php">Cancelar</a>
+                      <a class="btn btn-warning" type="button" href="periodo_academico.php">Cancelar</a>
                       <button type="submit" class="btn btn-success">Actualizar Datos</button>
                     </div>
                   </div>

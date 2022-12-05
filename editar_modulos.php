@@ -67,7 +67,10 @@ $id_prog_Estudios = $res_b_modulo['id_programa_estudio'];
                             $id_p_estudios = $res_b_mod['id'];
                           ?>
                           <option value="<?php echo $id_p_estudios; ?>" 
-                          <?php if($id_prog_Estudios === $id_p_estudios){
+						  
+                          <?php 
+						  	// hacemos una comparacion si nuestro id del programa de estudios coincide con el que traemos
+						  if($id_prog_Estudios === $id_p_estudios){
                             echo "selected";
                           } ?>
                           ><?php echo $res_b_mod['nombre']; ?></option>

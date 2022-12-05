@@ -84,6 +84,7 @@ include('include/verificar_sesion.php');
 												<td class=" d-flex justify-content-center align-items-center">
 													<span class="justify-center">
 														<a href="editar_p_academico.php?id=<?php echo $res_b_p_acad['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
+														<a href="operaciones/eliminar_periodo.php?id=<?php echo $res_b_p_acad['id']; ?>" class="btn btn-danger"><i class="fa fa-trash"> </i> Eliminar</a>
 													</span>
 												</td>
 											</tr>

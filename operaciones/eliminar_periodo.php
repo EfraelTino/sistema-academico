@@ -2,13 +2,13 @@
 include "../include/conexion.php"; 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM estudiante WHERE id='$id'";
+$sql = "DELETE FROM periodo_academico WHERE id='$id'";
 $ejecutar = mysqli_query($conexion, $sql);
 
 if ($ejecutar) {
     echo "<script>
 					alert('Registro Eliminado');
-					window.location= '../estudiantes.php';
+					window.location= '../periodo_academico.php';
 				</script>
 			";
 }else{
@@ -18,4 +18,5 @@ if ($ejecutar) {
 				</script>
 			";
 }
+
 mysqli_close($conexion);
