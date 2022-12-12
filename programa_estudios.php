@@ -77,7 +77,7 @@ include('include/verificar_sesion.php');
                                                 <td>
                                                     <span class="justify-center">
                                                     <a href="editar_prgrama.php?id=<?php echo $res_b_pro['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
-                                                    <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_pro['id']; ?>" class="btn btn-danger"><i class="fa fa-trash"> </i> Eliminar</a>
+                                                    
                                                     </span>
                                                 </td>
                                             </tr>

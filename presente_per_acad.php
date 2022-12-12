@@ -75,6 +75,7 @@ include('include/verificar_sesion.php');
 												<td class="d-flex justify-center align-items-center" >
 													<span class="justify-center">
 														<a href="edit_pre_p_acad.php?id=<?php echo $res_b_p_acad['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
+														<a href="delete_pre_perphp?id=<?php echo $res_b_p_acad['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
 												</td>
 											</tr>
 										<?php

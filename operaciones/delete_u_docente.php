@@ -8,7 +8,7 @@ $ejecutar = mysqli_query($conexion, $sql);
 if ($ejecutar) {
     echo "<script>
 					alert('Registro Eliminado');
-					window.location= '../UsuarioDocente.php';
+					window.location= '../usuarios_docentes.php';
 				</script>
 			";
 }else{

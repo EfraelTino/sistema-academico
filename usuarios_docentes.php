@@ -83,7 +83,7 @@ include('include/verificar_sesion.php');
 												?>
 												<td>
 													<a href="editar_usu_docente.php?id=<?php echo $res_b_u_docente	['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
-													<a href="operaciones/eliminar_docente.php?id=<?php echo $res_b_u_docente['id']; ?>" class="btn btn-danger"><i class="fa fa-trash"> </i> Eliminar</a>
+													<a href="operaciones/delete_u_estudiante.php?id=<?php echo $res_b_u_docente['id']; ?>" class="btn btn-danger"><i class="fa fa-trash"> </i> Eliminar</a>
 												</td>
 											</tr>
 										<?php

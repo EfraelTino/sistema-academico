@@ -73,6 +73,8 @@ include('include/verificar_sesion.php');
                                                 <td>
                                                     <span class="justify-center">
                                                     <a href="editar_condicion.php?id=<?php echo $res_b_condicion['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
+                                                    <a href="delete_condicion.php?id=<?php echo $res_b_condicion['id']; ?>" class="btn btn-danger"><i class="fa fa-edit"> </i> Eliminar</a>
+                                                    
                                                 </td>
                                             </tr>
                                         <?php
