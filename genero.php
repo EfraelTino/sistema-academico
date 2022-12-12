@@ -71,7 +71,7 @@ include('include/verificar_sesion.php');
                                                 <td>
                                                     <span class="justify-center">
                                                     <a href="editar_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
-                                                    <a href="delete_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-danger"><i class="fa fa-edit"> </i> Editar</a>
+                                                    <a href="operaciones/delete_genero.php?id=<?php echo $res_b_genero['id']; ?>" class="btn btn-danger"><i class="fa fa-edit"> </i> Editar</a>
                                                 </td>
                                             </tr>
                                         <?php

@@ -76,7 +76,7 @@ include('include/verificar_sesion.php');
                                                 <td><?php echo $res_b_pro['resolucion']; ?></td>
                                                 <td>
                                                     <span class="justify-center">
-                                                    <a href="editar_prgrama.php?id=<?php echo $res_b_pro['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
+                                                    <a href="operacioneseditar_prgrama.php?id=<?php echo $res_b_pro['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
                                                     
                                                     </span>
                                                 </td>
